@@ -1,6 +1,16 @@
 import java.util.HashMap;
-
+import java.util.Scanner;
 public class ArrayIntersection {
+
+	public static int[] takeInput(){
+        Scanner s = new Scanner(System.in);
+        int n = s.nextInt();
+        int arr[]=new int[n];
+        for(int i=0; i<n;i++){
+            arr[i]=s.nextInt();
+        }
+        return arr;
+    }
 
 
 	public static void arrayIntersection(int[] arr1,int[] arr2) {
@@ -49,8 +59,8 @@ public class ArrayIntersection {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
-		int[] arr1=Array.takeInput();
-		int[] arr2=Array.takeInput();
+		int[] arr1=takeInput();
+		int[] arr2=takeInput();
 
 		arrayIntersectionBest(arr1, arr2);
 
